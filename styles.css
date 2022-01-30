@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0; */
+  /* background-color: blanchedalmond; */
+}
+
+/* Comment: Overrides everything */
+
+body {
+  margin: 0;
+  background-color: rgb(236, 229, 219);
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  z-index: 1;
+}
+/* comment: nav cannot be a {display: flex} as the <ul> tag becomes the item. 
+Thus, to use <ul> tag as the container along with <li> tag as the item*/
+
+a,
+button {
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Sacramento", cursive; */
+  font-weight: 100;
+  font-size: 20px;
+  color: #1c65be;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+h1 {
+  color: rgb(66, 66, 75);
+  text-align: center;
+  position: relative; /* Without this position relative,  */
+  top: 25%;
+  z-index: 0;
+}
+
+h3 {
+  margin-left: 5%;
+}
+
+img {
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+p {
+  width: 50%;
+  font-weight: lighter;
+  /* margin:20%; */
+}
+
+#button1 :hover,
+#button1:focus {
+  /* Comment: without :hover, there was no effect and the inspect tools does not show the below code*/
+  display: block;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 80%;
+  max-width: 200px;
+  background: #fff; /* fallback color for old browsers */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  /* color: #fff; */ /*Important: I removed color and the text is visible*/
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+/*Question: I tired to increase width, but white space does not change. 
+Is there a way to change the width of the white background of the button such that it covers the words ?*/
+/************************************************************************/
+
+#button2 :hover {
+  display: block;
+  box-sizing: border-box;
+  padding: 6px;
+  width: 100%;
+  max-width: 400px;
+  background: #fff; /* fallback color for old browsers */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  /* color: #fff; */
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+/* Comment: why doesnt this show up in my inspect tool? Comment: because of psuedo element. We need to go to :hov and check the box 
+to see the :hov properties in the browser's dev tools */
+
+#button3 :hover {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 80%;
+  max-width: 200px;
+  background: #fff; /* fallback color for old browsers */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  /* color: #fff; */
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+
+#button4 :hover {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 80%;
+  max-width: 200px;
+  background: #fff; /* fallback color for old browsers */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  /* color: #fff; */
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+
+#profile-details {
+  background-color: rgb(255, 248, 219);
+}
+
+#degree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+/* #degree2 {
+  display: inline-block;
+  width: 100%;
+} */
+
+/* Question: I managed to create a format "Bachelor in Accs   2017" using CSS. Can I check why won't using {display:inline-block}
+on both <li> tags allow me to shift the <li> tag to the current display (i.e. "Bachelor in Accs   2017") ?*/
+/************************************************************************/
+
+#date ::marker {
+  text-decoration: none;
+}
+
+/* Comment: the ::marker is found in the inspect tool*/
+
+#date {
+  list-style: none;
+  text-decoration: none;
+  /* display: inline-block; */
+}
+/* Question: From the browser, after clicking onto inspect, how do we tell the priority of the items and 
+whether the items have been overriden? */
+/************************************************************************/
+
+.nav_bar {
+  list-style: none;
+  background-color: rgb(224, 254, 255);
+  display: flex;
+  /* position: relative; */
+  flex-wrap: wrap;
+  /* flex-direction: column; Important: Default is a row*/
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  margin: auto;
+}
+/* comment: .nav_bar has the property {display flex}, while the items inside the container are the <ul> tags  */
+
+.profileContainer {
+  display: flex;
+  /* position: relative; */
+  justify-content: center;
+  margin: 10% 0 5%;
+}
+/* Comment: I cannot use {position: relative}, as the div tag will fall below my h1 tag.  */
+
+.profilePicture {
+  border-radius: 50%;
+  width: 20%;
+  height: 40%;
+}
+
+.experienceContainer {
+  /* background-color: rgb(217, 253, 255); */
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+  width: 100%;
+}
+
+.experience {
+  margin-left: 30%;
+}
+
+.experienceTitle {
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Sacramento", cursive; */
+  font-weight: 100;
+  font-size: 20px;
+  color: #1c65be;
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 15%;
+  margin-left: 15%;
+}
+
+.educationContainer {
+  /* background-color: rgb(217, 253, 255); */
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+  width: 100%;
+}
+
+.education {
+  margin-left: 30%;
+}
+
+.educationTitle {
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Sacramento", cursive; */
+  font-weight: 100;
+  font-size: 20px;
+  color: #1c65be;
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 15%;
+  margin-left: 15%;
+}
+
+.skillsContainer {
+  /* background-color: rgb(217, 253, 255); */
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+  width: 100%;
+}
+
+.skills {
+  display: block;
+  /* background-color: rgb(217, 253, 255); */
+  width: 100%;
+  margin-left: 30%;
+}
+
+.skillsTitle {
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Sacramento", cursive; */
+  font-weight: 100;
+  font-size: 20px;
+  color: #1c65be;
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 15%;
+  margin-left: 15%;
+  margin-bottom: 0; /*Comment: To remove the space in the bottom page*/
+}
+
+/* Ignore below*/
+
+/* .product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} */
+
+/* reset */
+
+/* .primary-navigation a > [aria-hideen="true"] {
+  font-weight: none;
+  margin-inlne-en: 0.5rem;
+} */
+
+/* @media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 0 30%;
+    background: steelblue;
+  }
+} */
+
+/* nav {
+  background-color: rgb(245, 142, 68);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+} */
+
+/* Important*/
+
+/* deleted*/
+
+/* .nav_bar li {
+  display: inline-block;
+  padding: 0px 20px;
+} */
+
+/* .primary-navigation a {
+  text-decoration: none;
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Sacramento", cursive;
+} */
